@@ -2488,7 +2488,7 @@ spec:
     spec:
       containers:
       - args:
-        - --events-addr=http://notification-controller/
+        - --events-addr=http://notification-controller.notification-system/
         - --watch-all-namespaces=true
         - --log-level=info
         - --log-encoding=json
@@ -2561,7 +2561,7 @@ spec:
     spec:
       containers:
       - args:
-        - --events-addr=http://notification-controller/
+        - --events-addr=http://notification-controller.notification-system/
         - --watch-all-namespaces=true
         - --log-level=info
         - --log-encoding=json
@@ -2714,7 +2714,7 @@ spec:
     spec:
       containers:
       - args:
-        - --events-addr=http://notification-controller/
+        - --events-addr=http://notification-controller.notification-system/
         - --watch-all-namespaces=true
         - --log-level=info
         - --log-encoding=json
