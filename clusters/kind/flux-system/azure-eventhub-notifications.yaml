@@ -1,0 +1,23 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Provider
+metadata:
+  name: azure-eventhub
+  namespace: notification-system
+spec:
+  type: eventhub
+  secretRef:
+    name: azure-eventhub
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Alert
+metadata:
+  name: azure-eventhub
+  namespace: notification-system
+spec:
+  eventSeverity: info
+  providerRef:
+    name: azure-eventhub
+  eventSources:
+    - kind: Kustomization
+      name: flux-system
+      namespace: flux-system
